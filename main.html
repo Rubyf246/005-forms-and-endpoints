@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+
+<h1 style="background-color:rgba(178, 229, 245, 0.466);">Make Your Own Story</h1>
+<style>
+  body {
+  background-image: url('doc.png');
+  background-size: cover;
+}
+
+
+</style>
+<body>
+  <p style="color:#FF0000";>This is a "build your own story", input the following infomation for the story to come alive!</p>
+ <br>
+<form id="myForm" action="display.html" method="post">
+
+      <label for="animal">Animal:</label>
+      <input type="text" id="animal" name = "animal" placeholder= "Dogs" required> <br> <br>
+    </div>
+
+    <div> 
+
+      <label for="color">Color:</label>
+      <input type="text" id="color" name="color" placeholder= " First color" required><br><br>
+
+    </div>
+
+    <div> 
+
+      <label for="name2"> Second name:</label>
+      <input type="name2" id="name2" placeholder="Patrick" name="name2" required><br><br>
+
+    </div>
+
+    <div>
+
+        <label for="name1">First name:</label>
+        <input type="name1" id="name1"  placeholder="SpongeBob" name="name1" required >
+
+    </div>
+
+    <div>
+
+      <label for="adjective1">First adjective:</label>
+      <input type="adjective1" id="adjective1"  placeholder="First adjective" name="adjective1" required >
+
+  </div>
+
+  <div>
+
+    <label for="adjective2">Second adjective:</label>
+    <input type="adjective2" id="adjective2"  placeholder="Second Adjective" name="adjective2" required >
+
+</div>
+
+<div>
+
+  <label for="color2">Second Colour:</label>
+  <input type="color2" id="color2"  placeholder="Second Color" name="color2" required >
+
+</div>
+
+<div>
+
+  <label for="object">Object:</label>
+  <input type="object" id="object"  placeholder="Tree" name="object" required >
+
+</div>
+
+    <br>
+    <input type="submit">
+</form>
+ 
+
+
+<script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get form values
+        const animal = document.getElementById('animal').value;
+        const color = document.getElementById('color').value;
+        const name2 = document.getElementById('name2').value;
+        const name1 =   document.getElementById('name1').value;
+        const adjective1 =  document.getElementById('adjective1').value;
+        const adjective2 =  document.getElementById('adjective2').value;
+        const color2     =  document.getElementById('color2').value;
+        const object     =  document.getElementById('object').value;
+
+      
+
+        // Redirect to display.html with form values as URL parameters
+        window.location.href = 'display.html?animal=' + encodeURIComponent(animal) + '&color=' + encodeURIComponent(color)+ '&name2=' + encodeURIComponent(name2)+ '&name1=' + encodeURIComponent(name1) + '&adjective1 =' + encodeURIComponent(adjective1)+ '&adjective2=' + encodeURIComponent(adjective2) + '&color2=' + encodeURIComponent(color2) + '&object=' + encodeURIComponent(object);
+    });
+</script>
+
+
+

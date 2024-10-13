@@ -1,0 +1,45 @@
+ 
+
+ 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Form Values</title>
+</head>
+
+    <h2>Submitted Values</h2>
+    In the cheerful town of Sweetville, a kid named <span id = "name1"> </span> loved cookies more than anything. One Saturday, he rushed to Mrs. <span id = "name2"> </span>s bakery, only to find it closed with a sign: “Gone on a Cookie Adventure! Back soon!”
+
+    Feeling adventurous, he <span id = "name1"> </span> gathered his <span id="animal" > </span>, Lucy and Ben. They decided to have their own cookie adventure! Asking <span id="adjective1"> </span> <span id="color"> </span> squirrels and <span id="adjective2"></span> <span id="color2"> </span> birds for cookie recipes, they discovered a hidden dusty cookbook under an old <span id="object"> </span>!
+
+    Excited, they borrowed ingredients from neighbors and baked Magic Chocolate Chip Cookies. The sweet aroma filled the air, attracting everyone around.
+
+    When Mrs. Baker returned, she found <span id = "name1"> </span> gobbling up the delicious treats. From that day on, they celebrated Cookie Day every Saturday, turning their adventure into a sweet tradition!
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const color = urlParams.get('color');
+        const animal = urlParams.get('animal');
+        const name2 = urlParams.get('name2');
+        const name1 =      urlParams.get('name1');
+        const adjective1 = urlParams.get('adjective1');
+        const adjective2 = urlParams.get('adjective2');
+        const color2 =     urlParams.get('color2');
+        const object =     urlParams.get('object');
+   
+
+        // Display the values
+        document.getElementById('color').textContent =  color;
+        document.getElementById('animal').textContent =   animal;
+        document.getElementById('name2').textContent =   name2;
+        document.getElementById('name1').textContent =    name1;
+        document.getElementById('adjective1').textContent =  adjective1;
+        document.getElementById('adjective2').textContent =   adjective2;
+        document.getElementById('color2').textContent =   color2;
+        document.getElementById('object').textContent = object;
+       
+    </script>
+
+</html>
